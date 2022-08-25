@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: clamp(80%, 1250px, 95%);
+}
+
+.icon{
+    color: #E50914;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.links{
+    margin-left: 1.4rem;
+}
+
+.link{
+    padding: 0px 0.6rem;
+    list-style: none;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.right span{
+    margin-left: 1rem;
+}

@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.caret{
+    cursor: pointer;
+    margin-left: 0.3rem;
+    transition: transform 0.5s ease;
+}
+
+.caret:hover{
+    transform: rotate(180deg);
+}
