@@ -1,0 +1,15 @@
+.heading{
+    margin-top: 15px;
+    color: white;
+}
+
+.movie_container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.img{
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+}

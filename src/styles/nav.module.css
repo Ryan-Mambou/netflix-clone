@@ -29,12 +29,14 @@
 
 .link{
     padding: 0px 0.6rem;
-    list-style: none;
+    text-decoration: none;
+    color: white;
 }
 
 .right{
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .right span{

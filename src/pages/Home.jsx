@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import Nav from '../components/Nav';
-import styles from '../styles/home.module.css'
+import Banner from '../components/Banner';
+import Row from '../components/Row';
+import styles from '../styles/home.module.css';
+import { getPopular, getLatest, getTopRated, getUpcoming } from '../services/movieService';
+import { useState } from 'react';
+import Movie from '../components/Movie';
 
 function Home() {
-  const [movies, setMovies] = useState()
-
-  useEffect(() => {
-
-  }, [])
 
     const links = [
         'Accueil',
@@ -16,12 +14,18 @@ function Home() {
         'Nouveautes',
         'Ma liste',
         'Explorer par langue'
-    ]
+    ]    
 
   return (
-    <div className={styles.body}>
-        <Nav links={links}/>
-    </div>
+    <>
+   <Banner links={links}/>
+   <div className={styles.row_wrapper}>
+    <Row heading='Populaire sur Netflix' getMovies={getPopular}/>
+    <Row heading='Les mieux notés' getMovies={getTopRated}/>
+    <Row heading='Les plus recents' getMovies={getLatest}/>
+    <Row heading='A venir...' getMovies={getUpcoming}/>
+   </div>
+   </>
   )
 }
 
