@@ -9,13 +9,11 @@
     margin-left: auto;
     cursor: grab;
     overflow-x: hidden;
-    width: clamp(80%, 1250px, 95%);
 }
 
 .inner_carousel{
     display: flex;
-    background-color: aqua;
-    width: clamp(90%, 1300px, 95%);
+    flex: 1;
 }
 
 .img{
