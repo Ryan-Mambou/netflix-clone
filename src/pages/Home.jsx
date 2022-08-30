@@ -20,7 +20,6 @@ function Home() {
    <div className={styles.row_wrapper}>
     <Row heading='Populaire sur Netflix' getMovies={getPopular}/>
     <Row heading='Les mieux notés' getMovies={getTopRated}/>
-    <Row heading='Les plus recents' getMovies={getLatest}/>
     <Row heading='A venir...' getMovies={getUpcoming}/>
    </div>
    </>
