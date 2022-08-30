@@ -16,9 +16,13 @@
     width: clamp(80%, 1250px, 95%);
 }
 
+.mobile_nav{
+    display: none;
+}
+
 .icon{
     color: #E50914;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -30,6 +34,20 @@
 
 .links{
     margin-left: 1.4rem;
+}
+
+.links_tippy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141414;
+    padding: 0.5rem 0.5rem;
+}
+
+.link_tippy{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 .link{
@@ -46,4 +64,28 @@
 
 .right span{
     margin-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .links{
+        display: none;
+    }
+
+    .mobile_nav{
+        display: flex;
+        color: white;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+
+    .caret{
+        cursor: pointer;
+        margin-left: 0.3rem;
+        transition: transform 0.5s ease;
+    }
+    
+    .rotate{
+        transform: rotate(180deg);
+    }
 }
