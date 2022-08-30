@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/row.module.css';
 import Movie from './Movie';
+import { motion } from 'framer-motion'
 
 function Row({heading, getMovies}) {
   const [movies, setMovies] = useState([]);
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
+  const [width, setWidth] = useState(2100);
+  const carousel = useRef();
 
   useEffect(() => {
     
@@ -15,18 +18,22 @@ function Row({heading, getMovies}) {
       setMovies(results)
       return results;
     }
+    console.log(carousel.current.scrollWidth - carousel.current.offsetWidth)
+    //setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
       fetchMovies()
     }, [])
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column',
+    <div style={{display: 'flex', flexDirection: 'column',
     alignItems: 'flex-start', width: 'clamp(80%, 1250px, 95%)'}}>
-      <h3 className={styles.heading}>{heading}</h3>
-      <div className={styles.movie_container}>
+      <motion.h3 className={styles.heading}>{heading}</motion.h3>
+      <motion.div className={styles.carousel} ref={carousel}>
+      <motion.div drag='x' dragConstraints={{right: 0}} className={styles.inner_carousel}>
         {movies?.map(movie => (
-          <Movie key={movie.title} poster={`${baseImgUrl}${movie.poster_path}`} title={movie.title} />
+          <Movie key={movie.title} poster={`${baseImgUrl}${movie.poster_path}`} title={movie.title} id={movie.title}/>
         ))}
-      </div>
+      </motion.div>
+      </motion.div>
     </div>
   )
 }

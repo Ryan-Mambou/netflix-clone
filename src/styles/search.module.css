@@ -5,12 +5,13 @@
 .input{
     background-color: black;
     border: 1px solid white;
-    padding: 0.7rem 0.3rem;
+    padding: 0.5rem 0.3rem 0.5rem 2.5rem;
     width: 15rem;
+    color: white;
+    font-size: 0.9rem;
 }
 
 .input::placeholder{
-    text-align: center;
     font-size: 0.9rem;
 }
 

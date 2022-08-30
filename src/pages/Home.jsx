@@ -2,8 +2,6 @@ import Banner from '../components/Banner';
 import Row from '../components/Row';
 import styles from '../styles/home.module.css';
 import { getPopular, getLatest, getTopRated, getUpcoming } from '../services/movieService';
-import { useState } from 'react';
-import Movie from '../components/Movie';
 
 function Home() {
 

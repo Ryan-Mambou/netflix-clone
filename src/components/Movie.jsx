@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 import { AiOutlinePlus, AiOutlineLike } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Movie({title, poster}) {
+function Movie({title, poster, id}) {
   return (
     <div className={styles.box}>     
         <div className={styles.top}>

@@ -28,6 +28,7 @@ function Banner({links}) {
   }, [])
 
   return (
+    <>
     <div className={styles.body} style={{background: `url(${baseImgUrl}${image})`}}>
         <Nav links={links}/>
         <div className={styles.banner_content}>
@@ -40,7 +41,9 @@ function Banner({links}) {
             <button className={styles.button_info}><AiOutlineInfoCircle /> {' '}Plus d'infos</button>
           </div>
         </div>
+        <div className={styles.banner_shadow}></div>
     </div>
+    </>
   )
 }
 
