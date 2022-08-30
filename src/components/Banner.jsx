@@ -11,15 +11,11 @@ function Banner({links}) {
   const { backdrop_path: image } = movie;
   const baseImgUrl = 'https://image.tmdb.org/t/p/original';
 
-  console.log(movies)
-
   useEffect(() => {
     
   const fetchMovies = async () => {
     const { data } = await getPopular()
     const { results } = await data;
-    //setMovies(results)  
-    console.log(results)
     setMovie(results[Math.floor(Math.random() * results.length)])
     return results;
   }

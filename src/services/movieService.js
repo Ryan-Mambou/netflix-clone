@@ -8,7 +8,7 @@ export const getPopular = () => {
 }
 
 export const getLatest = () => {
-    return http.get(`${apiEndPoint}/latest?api_key=${apiKey}`)
+    return http.get(`${apiEndPoint}/latest?api_key=${apiKey}&language=en-US`)
 }
 
 export const getTopRated = () => {

@@ -14,7 +14,6 @@ function Row({heading, getMovies}) {
     const fetchMovies = async () => {
       const { data } = await getMovies()
       const { results } = await data;
-      console.log(results)
       setMovies(results)
       return results;
     }
