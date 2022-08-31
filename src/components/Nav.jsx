@@ -8,8 +8,8 @@ import { AiFillCaretDown } from "react-icons/ai";
 import Tippy from '@tippyjs/react';
 
 function Nav({links}) {
-  const [color, setColor] = useState(false);
-  const [caret, setCaret] = useState(false);
+  const [color, setColor] = useState(false)
+  const [caret, setCaret] = useState(false)
 
   const rotateCaret = () => {
     setCaret(!caret)
